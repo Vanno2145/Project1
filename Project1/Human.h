@@ -5,17 +5,17 @@ class Human
 	char* surname;
 	int age;
 public:
-	Human();
-	Human(char* n);
-	Human(char* n, char* s);
-	Human(char* n, char* s, int age);
+	Human();//Construct by default
+	Human(const char* n);//Construct by 1 params
+	Human(const char* n, const char* s);//Construct by 2 params and Delegation
+	Human(const char* n, const char* s, int a);//Construct by 3 params and Delegation
 
-	Human(const Human& first_human);
+	void Copy(const Human& first_human);//Copy construct
+	void Name();//Name initiation
+	void Surname();//Surname initiation
+	void Age();//Age initiation
+	void Print();//Print info
 
-	void Name();
-	void Surname();
-	void Age();
-
-	~Human();
+	~Human();//Destruct
 };
 

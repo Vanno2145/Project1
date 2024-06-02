@@ -10,24 +10,24 @@ Human::Human()
 	age = 0;
 }//Construct by default
 
-Human::Human(char* n)
+Human::Human(const char* n)
 {
 	name = new char[strlen(n) + 1];
 	strcpy_s(name, strlen(n) + 1, n);
 }//Construct by 1 params
 
-Human::Human(char* n, char* s) :Human(n)
+Human::Human(const char* n, const char* s) :Human(n)
 {
 	surname = new char[strlen(s) + 1];
 	strcpy_s(surname, strlen(s) + 1, s);
 }//Construct by 2 params
 
-Human::Human(char* n, char* s, int a):Human(n, s)
+Human::Human(const char* n, const char* s, int a):Human(n, s)
 {
 	age = a;
 }//Construct by 3 params
 
-Human::Human(const Human& first_human)
+void Human::Copy(const Human& first_human)
 {
 	name = new char[strlen(first_human.name) + 1];
 	strcpy_s(name, strlen(first_human.name) + 1, name);
@@ -65,7 +65,14 @@ void Human::Age()
 	cin >> Age;
 
 	age = Age;
-}//Iniåializator age
+}
+void Human::Print()
+{
+	cout << "Name: " << name << endl
+		<< "Surname: " << surname << endl
+		<< "Age: " << age << endl << endl;
+}
+
 
 Human::~Human()
 {

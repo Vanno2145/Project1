@@ -129,10 +129,12 @@
   <ItemGroup>
     <ClCompile Include="FileName.cpp" />
     <ClCompile Include="Flat.cpp" />
+    <ClCompile Include="House.cpp" />
     <ClCompile Include="Human.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Flat.h" />
+    <ClInclude Include="House.h" />
     <ClInclude Include="Human.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
